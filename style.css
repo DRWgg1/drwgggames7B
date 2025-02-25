@@ -1,0 +1,136 @@
+/* Grundläggande reset och font */
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Animerad bakgrund */
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* App-container */
+#app {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header och navigering */
+header {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+#nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+#nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main-content */
+main {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 20px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Formulär */
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+form input[type="text"],
+form input[type="password"],
+form input[type="file"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Meddelanden och fel */
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+.message {
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* Chatt */
+#chat-box {
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+#chat-box p {
+  margin: 5px 0;
+}
+
+/* Profilbild */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+/* Spel-container */
+.game-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
